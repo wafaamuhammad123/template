@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+   
+</head>
+  
+<style>
+  
+   /*small screen*/
+@media(min-width :768px)
+{
+.container{width: 750px;}
+
+}
+
+/*medium screem*/
+@media(min-width :992px)
+{
+.container{width: 970px;}
+
+}
+/*b use media 3shan a make sure en mesh hikun feh scroll tht l2ne width gwa l media*/
+@media(min-width :1200px)
+{
+.container{width: 1170px;}
+
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.header{
+  padding: 20px;
+}
+.header .container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+  .header .links{
+  position: relative;
+}
+
+.header .links:hover .icons span:nth-child(2){
+  width: 100%;
+}
+
+ .icons{
+width: 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-end;
+
+}
+
+.icons span{
+background-color: black;
+margin-bottom: 6px;
+
+
+}
+
+
+ .icons span:first-child{
+  height: 2px;
+width: 100%;
+}
+ .icons span:nth-child(2){
+  height: 2px;
+  width: 50%;
+  transition: 0.3s;
+}
+
+.icons span:last-child{
+  height: 2px;
+width: 100%;
+}
+
+
+.links ul::before{
+content: "";
+border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    position: absolute;
+    right: 5px;
+    top: -23px;
+
+}
+.links ul{
+  list-style: none;
+    padding: 0;
+    background-color: whitesmoke;
+    /* right: auto; */
+    right: 0;
+    margin: 0;
+    position: absolute;
+    min-width: 200px;
+    top: 40px;
+    display: none;
+ 
+}
+
+.links:hover ul{
+ 
+  display: block;
+}
+.links ul li a {
+ display: block;
+  padding: 12px;
+  text-decoration: none; /*3shn ashel l khat ele tht el link*/
+ color: black;
+ transition: 0.3s;
+}
+
+.links ul li a:hover {
+padding-left: 25px;
+
+}
+.links ul li:not(:last-child) a{
+
+  border-bottom: 1px solid rgb(227, 227, 227);
+}
+.landing{
+  background: url(photo-1619382803627-a1d7b7218224.jpeg) ;
+  background-size: cover;
+  height: 500px;
+}
+.text{
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+}
+/*root da lw h3ml color w amsheh 3l website klo*/
+:root{
+  --main-color:rgb(16 107 122);;
+}
+.text h1{
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+  text-align: center;
+  /*width:320px ..kda hkhle parag bt3e mitmddsg w ynzl line*/
+  max-width: 100%;/*3shan mitl3sh bra shasha bt3te*/
+}
+.text p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1; /*l distance ben lklma wle fo2eha*/
+}
+.features
+{
+background-color: rgb(238 245 246);;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+.features .container{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(300px,1fr));/*lw msa7te 1000 httwz3 3 mrat kol wahd 300 lkn lw 800 f 2 gnb b3d w hd hinzl tht*/
+/* grid-template-columns: 25vw 25vw 25vw;.. zayaha*/
+gap: 60px;
+}
+
+.feat{
+  
+  line-height: 1.5;
+
+}
+.feat h1{
+  font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.feat p{
+  font-size: 18px;
+    text-align: center;
+    color: #777;
+    line-height: 1.6;
+}
+.feat img{
+  position: relative;
+  left: 123px;
+  padding-top: 60px;
+}
+/* h3ml component sabet 3shan mwgod f kza hta mnen m a3ozo a use it*/
+.special-heading{
+  color: #dadada;
+    text-align: center;
+    margin: 20px;
+    font-size: 100px;
+    font-weight: bold;
+}
+.services .container p{
+  text-align: center;
+    margin: -50px 0 0;
+    font-size: 20px;
+    color: #64615d;;
+
+}
+@media(max-width:767px) {
+  .special-heading{
+    font-size: 70px;
+  }
+  
+}
+
+.service-content{
+  display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 90px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+}
+.serv{
+  display: flex;
+    margin-bottom: 30px;
+  
+}
+
+.txt h2{
+    font-weight: bold;
+    margin: 0px; /* l2n feh margin leh already lma bshelo hikhlele lklam gnb lsora zi mkot 3uza*/
+}
+.txt p{
+  text-align: center;
+  padding-top: 60px;
+    font-size: 17px;
+    color: #89837c;
+}
+
+@media(max-width:767px){
+.serv{
+  flex-direction: column;
+  text-align: center;
+
+}
+
+
+.serv img{
+ position: relative;
+ left: 120px;
+}
+
+}
+
+
+@media(max-width:800px){
+.serv{
+  flex-direction: column;
+  text-align: center;
+
+}
+
+
+.serv img{
+ position: relative;
+ left: 180px;
+}
+
+}
+
+.image-card{
+text-align: center;
+position: relative;
+}
+.image-card::before{ /*3uza ahot hga 3la ymen l sora*/
+content: "";
+   top: -26px;/*3shn ykon akbr mn sora tal3 fo2eha y3ne atwl mnha*/
+    height: calc(100% + 50px);
+    position: absolute;
+    background-color: #06346a;
+    content: "";
+    width: 60px;
+    right: 50px;
+    z-index: -1;/*3shn yrg3 wra l sora */
+}
+
+.image-card img{
+  width: 200px;
+    height: 250px;
+}
+
+@media(max-width:767px){
+  .image-card{
+
+    display: none;
+  }
+}
+
+.portofolio{
+  background-color: #efefef;
+  padding-top: 20px;
+ 
+  padding-bottom: 20px;
+}
+
+.portofolio .container p{
+  text-align: center;
+    margin: -50px 0 0;
+    font-size: 20px;
+    color: #434141;
+
+}
+
+
+.portofolio-content{
+  display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 90px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+}
+.card img{
+
+  width: 100%;
+  height: 200px;
+}
+.card{
+  background-color: white;
+  height: 350px;
+}
+.card .info{
+  padding: 5px;
+  padding-left: 20px;
+}
+
+.card .info h2{
+ 
+  font-weight: bolder;
+    padding-bottom: 50px;
+    font-size: 20px;
+   
+}
+
+.About .container p{
+  text-align: center;
+    margin: -50px 0 0;
+    font-size: 20px;
+    color: #434141;
+
+}
+
+.newimage img{
+  width: 260px;
+  height: 350px;
+  position: relative;
+}
+
+
+
+
+.About-content{
+ display: flex;
+ flex-wrap: wrap;
+ margin-top: 100px;
+ justify-content: space-between;
+}
+
+@media (max-width:991px){
+.about-text{
+text-align: center;
+flex-direction: column;/*3shan ynzlo tht b3d*/
+
+margin-top: 40px;
+
+}
+
+
+.newimage img{
+ margin: 0 auto 60;
+ padding-left: 110px;
+
+
+
+}
+
+.newimage::after {
+  display: none;
+}
+.newimage::before {
+  display: none;
+}
+
+.About{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+}
+
+.newimage::before {
+  content: "";
+    position: absolute;
+    width: 140px;
+    height: 450px;
+    border-left: 80px solid rgb(218, 217, 217);
+    /* border-bottom: 80px solid var(--main-color); */
+    z-index: -1;
+    /* bottom: -20px; */
+    top: 2370px;
+    left: 120px;
+ 
+}
+
+.newimage::after {
+  content: "";
+    position: absolute;
+    width: 110px;
+    height: 300px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 70px solid var(--main-color);
+    z-index: -1;
+    right: 930px;
+    top: 2385px;
+
+}
+.about-text{
+/*flex-basis: calc(100%-500px); /*3shan akhale l klam mfrod w f nfs lw2t wakhd nos lshasha gnb lsora..f ana khlet 500px d llsora */
+flex: 1; /*3shn klam ytht gnb sora*/
+padding-top: 40px;
+    padding-left: 200px;
+    line-height: 1.5;
+}
+
+.about-text .par1{
+  text-align: left;
+  padding-bottom: 60px;
+    font-weight: bolder;
+}
+
+
+.about-text .par2{
+  text-align: left; /*3shn klam klo ybd2 left*/
+  padding-bottom: 120px;
+    font-weight: bolder;
+    padding-top: 90px;
+    color: #d8dbe1;
+}
+.about-text hr{
+
+
+  width: 300px;
+    /* border: tan; */
+    /* line-height: 5; */
+    /* font-weight: bolder; */
+    display: inline-block;
+    /* text-align: left; */
+    border-color: #1fdabb;
+}
+
+
+.try{
+  height: 700px;
+    background-color: #0a2545;
+ margin-top: 40px;
+   
+  
+}
+
+.try .container{
+  display: flex ;
+  justify-content: center;
+    gap: 100px;
+    /* margin-top: 20px; */
+    padding-top: 100px;
+    display: flex;
+}
+
+
+
+.btn{
+ 
+  border-radius: 6px;
+    border: 1px;
+    gap: 20px;
+    height: 60px;
+    top: 20;
+    font-size: 22px;
+    /* margin-left: 20px; */
+    width: 280px;
+    margin-top: 40px;
+    gap: 20px;
+    
+}
+.btn:hover{
+
+background-color: #c49029;
+
+}
+
+.footer {
+  background-color: rgb(207, 207, 207);
+  color: rgb(125, 32, 32);
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.end{
+
+  background-color: #f6efef;
+  height: 400px;
+}
+
+.end .container p{
+  text-align: center;
+    margin: -50px 0 0;
+    font-size: 20px;
+    color: #1a395a;
+
+}
+
+.end-info{
+  line-height: 1.8;
+    padding-top: 120px;
+    font-size: 35px;
+    text-align: center;
+
+}
+.end-info .link{
+  display: block;
+  text-decoration: none;
+  color: #1fdabb;
+  font-weight: bolder;
+}
+
+@media (max-width:791px){
+.footer{
+height: 50px;
+  margin-left: 20px;
+}
+
+.try{
+  margin-left: 20px;
+  height: 900px;
+}
+.try .container {
+
+flex-direction: column;
+padding-top: 90px;
+gap: 40px;
+
+margin-left: 80px;
+
+}
+.last{
+  width: 100px;
+  height: 210px;
+  padding-bottom: 70px;
+}
+.btn{
+
+  width: 220px;
+margin-left: 20px;
+}
+
+.end{
+ 
+  display: none;
+}
+.par3{
+  display: none;
+}
+}
+
+
+
+  </style>
+
+<body>
+<div class="header">
+    <div class="container">
+      <img src="images (3).jpeg" width="100px" height="100px">
+        <div class="links">
+           <span class="icons">
+              <span></span>
+              <span></span> 
+              <span></span>
+              </span>
+                <ul>
+                  <li> <a href="services"> services</a></li>
+                      <li><a href="about"> about</a></li>
+                       <li><a href="contact"> contact</a></li>
+                         <li><a href="portofolio">portofolio</a></li>
+                        </ul>  </div></div></div>   
+ <div class="landing">
+   <div class="text">
+      <h1 style="margin: 0; ">  Join us</h1> <!-- khlet el margin b 0 3shan by def el h1 leh margin f bi3mle scroll mlgnb 3nd bg-->
+        <p> Enhance Your Events With Leadership &
+          Experience You Can Trust</p>
+           </div> </div>
+
+<div class="features">
+  <div class="container">
+    <diV class="feat">
+    <img src="People_Icon.svg" width="100px" height="100px">
+         <h1>People</h1>
+         <p>Expertise
+          you can rely
+          on to achieve the
+          results you need.</p>
+    </diV>
+
+    <diV class="feat">
+      <img src="Precision_Icon.svg " width="100px" height="100px">
+         <h1>Precision</h1>
+         <p>Advanced event
+          process aligns your
+          operations and logistics
+          for efficient execution.</p>
+    </diV>
+
+    <diV class="feat">
+      <img src="Passion_Icon.svg" height="100px" width="100px">
+         <h1>Passion
+        </h1>
+         <p>Steadfast
+          customer service
+          dedicated to making
+          your event stress-free.</p>
+    </diV></div></div>
+
+    <div class="services">
+      <div class="container">
+        <h2 class="special-heading"> Festival Passes</h2>
+          <p> Don't be busy, be productive</p>
+          <div class="service-content">
+            <div class="col"><!--3nde 3 col kol col feh thto hgat-->
+              <div class="serv">
+                <img src="360_F_258623607_a31m59gQNxn3lhw7OuuAlJwmqeeEQ90q.jpg" width="50px" height="50px">
+                <div class="txt">
+                  <h2>  
+                    General Admission
+                  </h2>
+                    <p style=" text-align: left;font-size: 19px; padding-top: 70px;">
+    Web development is a broad term for the work involved in developing a web site for the Internet or an intranet.
+                    </p>
+                </div></div>
+
+              <div class="serv">
+                <img src="360_F_331102245_Gl5bUxWeJUgDb5nnDocQpwKzgZfXC0gI.jpg" width="50px" height="50px">
+                <div class="txt">
+                  <h2>
+                    General Admission + Shuttle
+                  </h2>
+                    <p style=" text-align: left;font-size: 19px; padding-top: 70px;">
+                      Allows entrance to the venue and day parking lots for all three days and includes Any Line Shuttle Pass.
+                    </p>
+                </div></div> </div>
+                
+            <div class="col"><!--3nde 3 col kol col feh thto hgat-->
+              <div class="serv">
+                <img src="360_F_258623607_a31m59gQNxn3lhw7OuuAlJwmqeeEQ90q.jpg" width="50px" height="50px">
+                <div class="txt">
+                  <h2>
+                    VIP Pass
+                  </h2>
+                    <p style=" text-align: left;font-size: 19px; padding-top: 70px;">
+                      Allows access into the venue, day parking lots (Preferred Parking sold separately) and the two venue VIP areas.
+                    </p>
+                </div>  </div>
+
+              <div class="serv">
+                <img src="360_F_331102245_Gl5bUxWeJUgDb5nnDocQpwKzgZfXC0gI.jpg" width="50px" height="50px">
+                <div class="txt">
+                  <h2>
+                    Literature festivals
+                  </h2>
+                    <p style=" text-align: left; font-size: 19px; padding-top: 70px;">
+                      Literature festivals are all about books, poems, and other forms of literature.
+                       A typical literature festival programme includes book readings, interviews and discussions with authors 
+                </div>    </div> </div>
+      
+               <div class="col">
+                <div class="image-card">
+                  <img src="services.jpg" >
+                </div>
+               </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="portofolio">
+      <div class="container">
+        <h2 class="special-heading"> Events types</h2>
+          <p> Comprehensive event management for all event types</p>
+          <div class="portofolio-content">
+             <div class="card">
+              <img src="photo-1497032628192-86f99bcd76bc.jpeg" >
+              <div class="info">
+                <h2> corporate events</h2>
+                <p style="line-height: 1.4;
+                font-size: 18px;
+                  color: #b1aaa2;
+                  text-align: left;">Partner with our corporate event experts to deliver an attendee journey that drives engagement and yields high returns.
+</p>
+              </div> </div>
+
+              <div class="card">
+                <img src="diveristy20and20inclusion20in20the20workplace.jpg">
+                <div class="info">
+                  <h2> Industry events</h2>
+                <p style="line-height: 1.4;
+                font-size: 18px;
+                  color: #b1aaa2;
+                  text-align: left;">Shift an industry or spearhead a change with an event that achieves education and persuasion in the right measure.
+</p>
+                </div> </div>
+
+                <div class="card">
+                  <img src="Delivery URL - BetterUp - importance of teamwork [ARTICLE]-3.jpeg">
+                  <div class="info">
+                    <h2> Special events</h2>
+                <p style="line-height: 1.4;
+                font-size: 18px;
+                  color: #b1aaa2;
+                  text-align: left;">Make a splash that creates valuable momentum, not just moments at your celebration.
+</p>
+                  </div> </div>
+</div></div></div>
+
+<div class="About">
+  <div class="container">
+    <h2 class="special-heading"> About</h2>
+      <p> Less is more work</p>
+      <div class="About-content">
+        <div class="newimage">
+          <img src="about.jpg">
+        </div >
+          <div class="about-text">
+            <p class="par1">
+              You need knowledgeable event professionals who understand your goals, capture your vision, and bring you measurable results. Our talented team will
+               fuel your success with strategic ideas, comprehensive project plans, quality service and unparalleled support.
+            </p>
+            <hr>
+            <p class="par2" style="color: #818b94; font-weight: 200;">
+              Maximizing event ROI means synchronizing every detail with your bottom line goals. We empower you with the creative strategy and technical expertise to evoke specific responses and actions from your attendees.
+               You’ll experience unrivaled transparency, ease, and control in event management with proven process.
+            </p>
+          </div>
+      </div></div></div>
+
+
+      
+<div class="try">
+ 
+  <div class="container">
+    
+    <div class="try2">
+      
+    <div class="new-col">
+      
+      <div class="last">
+       
+        <img src="tents.png"style="width: 240px; height: 280px;">
+      </div>
+      <div class="last2">
+        <button class="btn"> Join waitlist w1</button>
+
+      </div></div>
+  </div>
+
+<div class="new-col">
+      
+      <div class="last">
+        <img src="packages.png" style="width: 240px; height: 280px;">   
+      </div>
+        <button class="btn"> Purchase w2</button>
+
+      </div></div>
+      <div class="par3" style="color: #ffffff; text-align: center; font-size: 40px; padding-top: 50px;">
+        <p> Weekend 2 On Sale</p>
+            </div>
+  </div>
+
+</div></div>
+
+
+<div class="end">
+  <div class="container">
+    <h2 class="special-heading"> contact</h2>
+      <p> We are born to create</p>
+      <div class="end-info">
+        <p class="label" style="font-size: 35px; font-weight: bolder; color: #0c2f57;"> Feel free to drop us a line at:</p>
+        <a href="mailto:wafaa.muhammad@gmail.com" class="link">mailto:wafaa.muhammad@gmail.com</a>
+
+      </div>
+  </div>
+</div>
+
+<div class="footer">&copy; 2021 <span>Leon</span> All Right Reserved</div>
+
+
+
+
+</body>
+</html>
